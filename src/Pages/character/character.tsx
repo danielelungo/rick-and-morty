@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Oval } from "react-loader-spinner";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
+import styled from "styled-components";
 import CharDetail from "../../Components/charDetails/charDetails";
 import CharTable from "../../Components/charTable/charTable";
 import LocationDetails from "../../Components/locationDetails/locationDetails";
@@ -63,32 +64,21 @@ const Character = () => {
           <div>
             {response && (
               <div>
-                <h2>{response?.name}</h2>
+                <Name>{response?.name}</Name>
 
                 <div>
-                  <img
+                  <Image
                     src={response?.image}
                     alt={response?.name}
                     loading="lazy"
                   />
                 </div>
-                <div>
-                  <CharDetail
-                    dataTestid="species"
-                    data={response?.species}
-                    title="Species: "
-                  />
+                <DetailsContainer>
                   <CharDetail
                     dataTestid="gender"
                     data={response?.gender}
                     title="Gender: "
                   />
-                  <CharDetail
-                    dataTestid="status"
-                    data={response?.status}
-                    title="Status: "
-                  />
-
                   <LocationDetails
                     response={response}
                     mainData={locationData}
@@ -100,17 +90,17 @@ const Character = () => {
                     mainData={originData}
                     error={errorOrigin}
                   />
-
-                  <div>
-                    <span>Chapters that {response.name} featured on</span>
-
-                    {errorEpisodes ? (
-                      <span>{errorEpisodes}</span>
-                    ) : (
-                      episodesData && <CharTable data={episodesData} />
-                    )}
-                  </div>
-                </div>
+                  {errorEpisodes ? (
+                    <span>{errorEpisodes}</span>
+                  ) : (
+                    episodesData && (
+                      <>
+                        <h4>Chapters that {response.name} is featured on:</h4>
+                        <CharTable data={episodesData} />
+                      </>
+                    )
+                  )}
+                </DetailsContainer>
               </div>
             )}
           </div>
@@ -121,3 +111,16 @@ const Character = () => {
 };
 
 export default React.memo(Character);
+
+const Name = styled.h2``;
+
+const Image = styled.img`
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px #888;
+  box-shadow: 0 0 5px 5px #888;
+`;
+
+const DetailsContainer = styled.div`
+  margin-top: 15px;
+`;
