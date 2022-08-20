@@ -23,7 +23,7 @@ const CharTable: React.FC<CharTableProps> = ({ data }) => {
       <tbody>
         {data?.map((item: EpisodesType) => (
           <tr key={item?.id}>
-            <td>{item.id}</td>
+            <td>{item?.id}</td>
             <td>{item?.name}</td>
             <td>{item?.date}</td>
           </tr>
