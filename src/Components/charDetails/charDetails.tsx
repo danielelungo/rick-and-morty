@@ -13,7 +13,6 @@ const CharDetail: React.FC<CharDetailProps> = ({
   list = false,
   data,
   title,
-  className = "",
   dataTestid,
 }) => {
   return (
