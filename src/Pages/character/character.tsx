@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Oval } from "react-loader-spinner";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import CharDetail from "../../Components/charDetails/charDetails";
 import CharTable from "../../Components/charTable/charTable";
@@ -49,7 +50,9 @@ const Character = () => {
     <div>
       <div onClick={handleHomePage}>Back</div>
       {loading ? (
-        <div>loadin</div>
+        <div>
+          <Oval />
+        </div>
       ) : (
         <div>
           {error && (

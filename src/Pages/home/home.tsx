@@ -1,4 +1,5 @@
 import React from "react";
+import { Oval } from "react-loader-spinner";
 import { useLocation } from "react-router-dom";
 import Char from "../../Components/char/char";
 import useAllChars from "../../Hooks/useAllChars";
@@ -25,19 +26,21 @@ function Home() {
         {error ? (
           <span>{error}</span>
         ) : loading ? (
-          <span>loading</span>
+          <Oval />
         ) : (
-          data && <Char data={data} page={page} />
+          data && (
+            <div>
+              <Char data={data} page={page} />
+              <button disabled={page === 1} onClick={prevPageHandler}>
+                prev
+              </button>
+              <span>Page: {page}</span>
+              <button disabled={page === numPages} onClick={nextPageHandler}>
+                next
+              </button>
+            </div>
+          )
         )}
-      </div>
-      <div>
-        <button disabled={page === 1} onClick={prevPageHandler}>
-          prev
-        </button>
-        <span>Page: {page}</span>
-        <button disabled={page === numPages} onClick={nextPageHandler}>
-          next
-        </button>
       </div>
     </>
   );
