@@ -1,12 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 interface CharDetailProps {
   list?: boolean;
   data: string | number;
   title: string;
   dataTestid: string;
-
-  className?: React.HTMLAttributes<HTMLSpanElement> | string;
 }
 
 const CharDetail: React.FC<CharDetailProps> = ({
@@ -16,18 +15,28 @@ const CharDetail: React.FC<CharDetailProps> = ({
   dataTestid,
 }) => {
   return (
-    <>
+    <Details>
       {list ? (
-        <li data-testid={dataTestid}>
+        <List data-testid={dataTestid}>
           {title} {data}
-        </li>
+        </List>
       ) : (
-        <span data-testid={dataTestid}>
+        <Title data-testid={dataTestid}>
           {title} {data}
-        </span>
+        </Title>
       )}
-    </>
+    </Details>
   );
 };
 
 export default CharDetail;
+
+const Details = styled.div`
+  margin: 10px;
+`;
+
+const List = styled.li`
+  font-weight: 500;
+`;
+
+const Title = styled.h4``;
