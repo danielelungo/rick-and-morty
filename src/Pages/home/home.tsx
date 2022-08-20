@@ -7,14 +7,14 @@ import usePagination from "../../Hooks/usePagination";
 
 type PageId = {
   pageId: number;
-};
+} | null;
 
 function Home() {
   const location = useLocation();
-  const { pageId } = location?.state as PageId;
+  const state = location.state as PageId;
 
   const { page, nextPageHandler, prevPageHandler } = usePagination(
-    pageId ? pageId : 1,
+    state?.pageId ? state?.pageId : 1,
   );
 
   const { data, error, loading, numPages } = useAllChars(page);
