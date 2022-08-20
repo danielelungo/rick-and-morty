@@ -14,7 +14,7 @@ const useEpisodes = (allEpisodes: string[]) => {
 
   const [episodesData, setEpisodesData] = useState<EpisodesType[]>();
 
-  const fetchData = (epAll: string[]) => {
+  const fetchData = () => {
     if (allEpisodes?.length > 0) {
       const allEp = allEpisodes.map((ep) => axios.get(ep));
 
@@ -44,7 +44,7 @@ const useEpisodes = (allEpisodes: string[]) => {
 
   useEffect(() => {
     if (allEpisodes) {
-      fetchData(allEpisodes);
+      fetchData();
     }
   }, [allEpisodes]);
 
