@@ -1,10 +1,11 @@
 import React from "react";
+import { Character, CharacterLocation } from "../../Interfaces/types";
 import CharDetail from "../charDetails/charDetails";
 
 interface LocationDetailsProps {
-  mainData?: any;
+  mainData?: CharacterLocation;
   error: string;
-  response: any;
+  response: Character;
 }
 
 const LocationDetails: React.FC<LocationDetailsProps> = ({
@@ -26,21 +27,21 @@ const LocationDetails: React.FC<LocationDetailsProps> = ({
         mainData && (
           <div>
             <CharDetail
-              data={mainData?.residents?.length as number}
+              data={mainData?.residents?.length}
               title="Amount of residents: "
               dataTestid="amount of residents"
               list
             />
 
             <CharDetail
-              data={mainData?.dimension as string}
+              data={mainData?.dimension}
               title="Dimension: "
               dataTestid="dimension"
               list
             />
             <CharDetail
               dataTestid="type"
-              data={mainData?.type as string}
+              data={mainData?.type}
               title="Type: "
               list
             />
