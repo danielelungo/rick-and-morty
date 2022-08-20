@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { CharacterLocation } from "../Interfaces/types";
 
 const useCharLocation = (url: string) => {
   const [errorLocation, setErrorLocation] = useState("");
   const [loadingLocation, setLoadingLocation] = useState(true);
-  const [locationData, setLocationData] = useState<any>();
+  const [locationData, setLocationData] = useState<CharacterLocation>();
 
   const fetchData = (url: string) => {
     axios
-      .get<any>(url)
+      .get(url)
       .then((res) => {
         setLocationData(res.data);
       })
