@@ -24,9 +24,9 @@ function Home() {
       <h1>Home</h1>
       <div>
         {error ? (
-          <span>{error}</span>
+          <h1>{error}</h1>
         ) : loading ? (
-          <Oval />
+          <Oval wrapperClass="loader" height={150} width={150} />
         ) : (
           data && (
             <div>

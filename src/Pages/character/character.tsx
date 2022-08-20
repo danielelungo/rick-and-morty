@@ -43,16 +43,11 @@ const Character = () => {
     navigate("/", { state: { pageId: (locationId?.state as PageId).pageId } });
   });
 
-  const handleHomePage = () => {
-    navigate("/", { state: { pageId: (locationId?.state as PageId).pageId } });
-  };
-
   return (
     <div>
-      <div onClick={handleHomePage}>Back</div>
       {loading ? (
         <div>
-          <Oval />
+          <Oval wrapperClass="loader" height={150} width={150} />
         </div>
       ) : (
         <div>
