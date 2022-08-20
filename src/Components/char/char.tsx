@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Character } from "../../Interfaces/types";
 
 interface TableProps {
-  data: any[];
+  data: Character[];
   page: number;
 }
 
@@ -17,7 +18,7 @@ const Char: React.FC<TableProps> = ({ data, page }) => {
     <div>
       {data?.length ? (
         <div>
-          {data?.map((item: any) => (
+          {data?.map((item: Character) => (
             <div key={item?.id} onClick={() => openCharacter(item.id)}>
               <span>{item.id}</span>
               <span>{item?.name}</span>
