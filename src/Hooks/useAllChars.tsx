@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Character } from "../Interfaces/types";
 
 const useAllChars = (page: number) => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<Character[]>([]);
   const [error, setError] = useState("");
   const [loading, setloading] = useState(true);
   const [numPages, setNumPages] = useState(0);
 
   const fetchData = (page: number) => {
     axios
-      .get<any>(`https://rickandmortyapi.com/api/character/?page=${page}`)
+      .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
 
       .then((res) => {
         setNumPages(res.data.info.pages);
