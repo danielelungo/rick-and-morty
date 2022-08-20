@@ -12,7 +12,7 @@ import useCharOrigin from "../../Hooks/useCharOrigin";
 import useEpisodes from "../../Hooks/useEpisodes";
 
 type PageId = {
-  pageId: string;
+  pageId: number;
 };
 
 const Character = () => {

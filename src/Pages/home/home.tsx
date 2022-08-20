@@ -6,7 +6,7 @@ import useAllChars from "../../Hooks/useAllChars";
 import usePagination from "../../Hooks/usePagination";
 
 type PageId = {
-  pageId: string;
+  pageId: number;
 };
 
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
   const { pageId } = location?.state as PageId;
 
   const { page, nextPageHandler, prevPageHandler } = usePagination(
-    pageId ? Number(pageId) : 1,
+    pageId ? pageId : 1,
   );
 
   const { data, error, loading, numPages } = useAllChars(page);
