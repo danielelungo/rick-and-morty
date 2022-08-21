@@ -14,7 +14,7 @@ const useCharOrigin = (url: string) => {
         setOriginData(res.data);
       })
       .catch((err) => {
-        setErrorOrigin("There is no origin url");
+        setErrorOrigin("Can't fetch data");
         console.log("error: ", err);
       })
       .finally(() => {

@@ -14,7 +14,7 @@ const useCharLocation = (url: string) => {
         setLocationData(res.data);
       })
       .catch((err) => {
-        setErrorLocation("No location url provided");
+        setErrorLocation("Can't fetch data");
         console.log("error: ", err);
       })
       .finally(() => {

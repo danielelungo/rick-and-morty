@@ -18,7 +18,7 @@ const useAxios = (id: number) => {
         setOrigin(res.data.origin.url);
       })
       .catch((err) => {
-        setError(err);
+        setError("Can't fetch data");
         console.log("error: ", err);
       })
       .finally(() => {
