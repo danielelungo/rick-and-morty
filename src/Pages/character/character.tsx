@@ -97,7 +97,7 @@ const Character = () => {
                   ) : (
                     episodesData && (
                       <>
-                        <h4>Chapters that {response.name} is featured on:</h4>
+                        <h4>Chapters in which {response.name} is featured:</h4>
                         <CharTable data={episodesData} />
                       </>
                     )
