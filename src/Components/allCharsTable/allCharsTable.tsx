@@ -8,7 +8,7 @@ interface TableProps {
   page: number;
 }
 
-const Char: React.FC<TableProps> = ({ data, page }) => {
+const AllCharsTable: React.FC<TableProps> = ({ data, page }) => {
   const navigate = useNavigate();
 
   const openCharacter = (id: number) => {
@@ -36,7 +36,7 @@ const Char: React.FC<TableProps> = ({ data, page }) => {
   );
 };
 
-export default Char;
+export default AllCharsTable;
 
 const Container = styled.div`
   cursor: pointer;

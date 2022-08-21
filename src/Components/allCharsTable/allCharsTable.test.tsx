@@ -1,12 +1,12 @@
 import React from "react";
-import Char from "./char";
+import Char from "./allCharsTable";
 import { BrowserRouter } from "react-router-dom";
 import renderer from "react-test-renderer";
 import { data } from "../../__mocks__/charData";
 import { render, screen } from "@testing-library/react";
 
-describe("Char component", () => {
-  test("renders Char Component", () => {
+describe("AllCharsTable component", () => {
+  test("renders AllCharsTable Component", () => {
     const tree = renderer
       .create(
         <BrowserRouter>

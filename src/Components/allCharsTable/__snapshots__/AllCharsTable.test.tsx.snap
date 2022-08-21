@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Char component renders Char Component 1`] = `
+exports[`AllCharsTable component renders AllCharsTable Component 1`] = `
 <div>
   <div
     className="sc-bczRLJ jIDRa"

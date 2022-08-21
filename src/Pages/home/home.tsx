@@ -2,7 +2,7 @@ import React from "react";
 import { Oval } from "react-loader-spinner";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import Char from "../../Components/char/char";
+import AllCharsTable from "../../Components/allCharsTable/allCharsTable";
 import useAllChars from "../../Hooks/useAllChars/useAllChars";
 import usePagination from "../../Hooks/usePagination/usePagination";
 
@@ -30,7 +30,7 @@ function Home() {
       ) : (
         data?.length && (
           <div>
-            <Char data={data} page={page} />
+            <AllCharsTable data={data} page={page} />
             <ButtonContainer>
               <Button disabled={page === 1} onClick={prevPageHandler}>
                 prev
