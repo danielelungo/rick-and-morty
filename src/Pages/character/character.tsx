@@ -6,7 +6,7 @@ import CharDetail from "../../Components/charDetails/charDetails";
 import CharTable from "../../Components/charTable/charTable";
 import LocationDetails from "../../Components/locationDetails/locationDetails";
 import OriginDetails from "../../Components/originDetails/origindetails";
-import useAxios from "../../Hooks/useCharDetails/useCharDetails";
+import useCharDetails from "../../Hooks/useCharDetails/useCharDetails";
 import useBackListener from "../../Hooks/useBackListener/useBackListener";
 import useCharLocation from "../../Hooks/useCharLocation/useCharLocation";
 import useCharOrigin from "../../Hooks/useCharOrigin/useCharOrigin";
@@ -23,7 +23,9 @@ const Character = () => {
 
   const navigate = useNavigate();
 
-  const { response, loading, error, location, origin } = useAxios(Number(id));
+  const { response, loading, error, location, origin } = useCharDetails(
+    Number(id),
+  );
 
   const { locationData, errorLocation } = useCharLocation(location);
 

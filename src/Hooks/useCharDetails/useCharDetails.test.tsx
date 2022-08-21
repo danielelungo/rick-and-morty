@@ -2,17 +2,17 @@ import { renderHook } from "@testing-library/react-hooks";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 import { episodeDetails } from "../../__mocks__/episodeDetails";
-import useAxios from "./useCharDetails";
+import useCharDetails from "./useCharDetails";
 
-describe("useAxios", () => {
-  test("useAxios performs GET request", async () => {
+describe("useCharDetails", () => {
+  test("useCharDetails performs GET request", async () => {
     const id = 1;
     const mock = new MockAdapter(axios);
     const url = `https://rickandmortyapi.com/api/character/${id}`;
 
     mock.onGet(url).reply(200, episodeDetails);
 
-    const { result, waitForNextUpdate } = renderHook(() => useAxios(id));
+    const { result, waitForNextUpdate } = renderHook(() => useCharDetails(id));
 
     expect(result.current.response).toEqual(undefined);
     expect(result.current.location).toEqual("");
@@ -24,7 +24,7 @@ describe("useAxios", () => {
     expect(result.current.location).toEqual(episodeDetails.location.url);
     expect(result.current.origin).toEqual(episodeDetails.origin.url);
   });
-  test("useAxios should display error ", async () => {
+  test("useCharDetails should display error ", async () => {
     const id = 1;
     const mock = new MockAdapter(axios);
     const url = `https://rickandmortyapi.com/api/character/${id}`;
@@ -32,7 +32,7 @@ describe("useAxios", () => {
 
     mock.onGet(url).reply(404, mockData);
 
-    const { result, waitForNextUpdate } = renderHook(() => useAxios(id));
+    const { result, waitForNextUpdate } = renderHook(() => useCharDetails(id));
 
     expect(result.current.error).toEqual("");
 
