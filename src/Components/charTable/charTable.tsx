@@ -5,6 +5,7 @@ type EpisodesType = {
   id: number;
   name: string;
   date: string;
+  episode: string;
 };
 
 interface CharTableProps {
@@ -15,13 +16,13 @@ const CharTable: React.FC<CharTableProps> = ({ data }) => {
   return (
     <div>
       <ContainerTitle>
-        <EpisodeTitle>Ep N°</EpisodeTitle>
+        <EpisodeTitle>Ep</EpisodeTitle>
         <NameTitle>Name</NameTitle>
         <DateTitle>Date</DateTitle>
       </ContainerTitle>
       {data?.map((item: EpisodesType) => (
         <Container key={item?.id}>
-          <Episode>{item?.id}</Episode>
+          <Episode>{item?.episode}</Episode>
           <Name>{item?.name}</Name>
           <Date>{item?.date}</Date>
         </Container>

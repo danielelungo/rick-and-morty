@@ -5,6 +5,7 @@ type EpisodesType = {
   id: number;
   name: string;
   date: string;
+  episode: string;
 };
 
 const useEpisodes = (allEpisodes: string[]) => {
@@ -25,7 +26,8 @@ const useEpisodes = (allEpisodes: string[]) => {
             const data = allData.map((item) => ({
               id: item?.data?.id,
               name: item?.data?.name,
-              date: item.data.air_date,
+              date: item?.data?.air_date,
+              episode: item?.data?.episode,
             }));
             setEpisodesData(data);
           }),
