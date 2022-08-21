@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharTable component renders CharTable Component 1`] = `
+<div>
+  <div
+    className="sc-bczRLJ hBJfIz"
+  >
+    <div
+      className="sc-gsnTZi GLudu"
+    >
+      Ep N°
+    </div>
+    <div
+      className="sc-dkzDqf iacFKi"
+    >
+      Name
+    </div>
+    <div
+      className="sc-hKMtZM gerlvS"
+    >
+      Date
+    </div>
+  </div>
+  <div
+    className="sc-eCYdqJ kSjEDL"
+  >
+    <div
+      className="sc-jSMfEi jrxkFZ"
+    >
+      1
+    </div>
+    <div
+      className="sc-gKXOVf hRgWju"
+    >
+      Pilot
+    </div>
+    <div
+      className="sc-iBkjds duicVq"
+    >
+      December 2, 2013
+    </div>
+  </div>
+  <div
+    className="sc-eCYdqJ kSjEDL"
+  >
+    <div
+      className="sc-jSMfEi jrxkFZ"
+    >
+      2
+    </div>
+    <div
+      className="sc-gKXOVf hRgWju"
+    >
+      Lawnmower Dog
+    </div>
+    <div
+      className="sc-iBkjds duicVq"
+    >
+      December 9, 2013
+    </div>
+  </div>
+</div>
+`;
