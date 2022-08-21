@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationDetails component renders LocationDetails Component 1`] = `
+Array [
+  <div
+    className="sc-bczRLJ gVHrnU"
+  >
+    <h4
+      className="sc-dkzDqf"
+    >
+      Location: 
+       
+      Morty Smith
+    </h4>
+  </div>,
+  <div>
+    <div
+      className="sc-bczRLJ gVHrnU"
+    >
+      <li
+        className="sc-gsnTZi fMdjaC"
+      >
+        Amount of residents: 
+         
+        100
+      </li>
+    </div>
+    <div
+      className="sc-bczRLJ gVHrnU"
+    >
+      <li
+        className="sc-gsnTZi fMdjaC"
+      >
+        Dimension: 
+         
+        unknown
+      </li>
+    </div>
+    <div
+      className="sc-bczRLJ gVHrnU"
+    >
+      <li
+        className="sc-gsnTZi fMdjaC"
+      >
+        Type: 
+         
+        Space station
+      </li>
+    </div>
+  </div>,
+]
+`;
