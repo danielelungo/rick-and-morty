@@ -5,23 +5,21 @@ interface CharDetailProps {
   list?: boolean;
   data: string | number;
   title: string;
-  dataTestid: string;
 }
 
 const CharDetail: React.FC<CharDetailProps> = ({
   list = false,
   data,
   title,
-  dataTestid,
 }) => {
   return (
     <Details>
       {list ? (
-        <List data-testid={dataTestid}>
+        <List>
           {title} {data}
         </List>
       ) : (
-        <Title data-testid={dataTestid}>
+        <Title>
           {title} {data}
         </Title>
       )}

@@ -69,11 +69,7 @@ const Character = () => {
                   />
                 </div>
                 <DetailsContainer>
-                  <CharDetail
-                    dataTestid="gender"
-                    data={response?.gender}
-                    title="Gender: "
-                  />
+                  <CharDetail data={response?.gender} title="Gender: " />
                   <LocationDetails
                     response={response}
                     mainData={locationData}

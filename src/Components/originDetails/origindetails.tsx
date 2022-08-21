@@ -15,11 +15,7 @@ const OriginDetails: React.FC<OriginDetailsProps> = ({
 }) => {
   return (
     <>
-      <CharDetail
-        data={response?.origin.name}
-        title="Origin: "
-        dataTestid="origin"
-      />
+      <CharDetail data={response?.origin.name} title="Origin: " />
       {error ? (
         <span>{error}</span>
       ) : (
@@ -29,20 +25,9 @@ const OriginDetails: React.FC<OriginDetailsProps> = ({
               data={mainData?.residents?.length}
               title="Amount of residents: "
               list
-              dataTestid="amount of residents "
             />
-            <CharDetail
-              data={mainData?.dimension}
-              title="Dimension: "
-              list
-              dataTestid="dimension"
-            />
-            <CharDetail
-              dataTestid="type"
-              data={mainData?.type}
-              title="Type: "
-              list
-            />
+            <CharDetail data={mainData?.dimension} title="Dimension: " list />
+            <CharDetail data={mainData?.type} title="Type: " list />
           </div>
         )
       )}
