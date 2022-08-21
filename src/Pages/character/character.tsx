@@ -6,7 +6,7 @@ import CharDetail from "../../Components/charDetails/charDetails";
 import CharTable from "../../Components/charTable/charTable";
 import LocationDetails from "../../Components/locationDetails/locationDetails";
 import OriginDetails from "../../Components/originDetails/origindetails";
-import useAxios from "../../Hooks/useAxios/useAxios";
+import useAxios from "../../Hooks/useCharDetails/useCharDetails";
 import useBackListener from "../../Hooks/useBackListener/useBackListener";
 import useCharLocation from "../../Hooks/useCharLocation/useCharLocation";
 import useCharOrigin from "../../Hooks/useCharOrigin/useCharOrigin";

@@ -2,7 +2,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 import { episodeDetails } from "../../__mocks__/episodeDetails";
-import useAxios from "./useAxios";
+import useAxios from "./useCharDetails";
 
 describe("useAxios", () => {
   test("useAxios performs GET request", async () => {

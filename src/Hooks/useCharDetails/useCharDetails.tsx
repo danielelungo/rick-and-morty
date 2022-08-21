@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Character } from "../../Interfaces/types";
 
-const useAxios = (id: number) => {
+const useCharDetails = (id: number) => {
   const [response, setResponse] = useState<Character>();
   const [error, setError] = useState("");
   const [loading, setloading] = useState<boolean>(true);
@@ -40,4 +40,4 @@ const useAxios = (id: number) => {
   return { response, error, loading, location, origin };
 };
 
-export default useAxios;
+export default useCharDetails;
