@@ -23,7 +23,9 @@ const Char: React.FC<TableProps> = ({ data, page }) => {
             <Container key={item?.id} onClick={() => openCharacter(item.id)}>
               <Name>{item?.name}</Name>
               <Status color={item?.status}>{item?.status}</Status>
-              <Species>{item?.species}</Species>
+              <Species speciesLength={item?.species?.length}>
+                {item?.species}
+              </Species>
             </Container>
           ))}
         </div>
@@ -67,9 +69,13 @@ const Status = styled.div`
   border-radius: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-weight: 600;
 `;
-const Species = styled.div`
+const Species = styled.div<{ speciesLength: number }>`
   flex: 1;
   align-self: center;
   font-weight: 600;
+  @media only screen and (max-width: 500px) {
+    font-size: ${({ speciesLength }) => (speciesLength > 5 ? "11px" : "16px")};
+  }
 `;
