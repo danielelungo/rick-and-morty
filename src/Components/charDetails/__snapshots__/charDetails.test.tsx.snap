@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharDetails component renders CharDetails Component 1`] = `
+<div
+  className="sc-bczRLJ gVHrnU"
+>
+  <h4
+    className="sc-dkzDqf"
+  >
+    origin
+     
+    10
+  </h4>
+</div>
+`;
