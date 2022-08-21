@@ -3,8 +3,8 @@ import { Oval } from "react-loader-spinner";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Char from "../../Components/char/char";
-import useAllChars from "../../Hooks/useAllChars";
-import usePagination from "../../Hooks/usePagination";
+import useAllChars from "../../Hooks/useAllChars/useAllChars";
+import usePagination from "../../Hooks/usePagination/usePagination";
 
 type PageId = {
   pageId: number;

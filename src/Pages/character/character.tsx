@@ -6,11 +6,11 @@ import CharDetail from "../../Components/charDetails/charDetails";
 import CharTable from "../../Components/charTable/charTable";
 import LocationDetails from "../../Components/locationDetails/locationDetails";
 import OriginDetails from "../../Components/originDetails/origindetails";
-import useAxios from "../../Hooks/useAxios";
-import useBackListener from "../../Hooks/useBackListener";
-import useCharLocation from "../../Hooks/useCharLocation";
-import useCharOrigin from "../../Hooks/useCharOrigin";
-import useEpisodes from "../../Hooks/useEpisodes";
+import useAxios from "../../Hooks/useAxios/useAxios";
+import useBackListener from "../../Hooks/useBackListener/useBackListener";
+import useCharLocation from "../../Hooks/useCharLocation/useCharLocation";
+import useCharOrigin from "../../Hooks/useCharOrigin/useCharOrigin";
+import useEpisodes from "../../Hooks/useEpisodes/useEpisodes";
 
 type PageId = {
   pageId: number;

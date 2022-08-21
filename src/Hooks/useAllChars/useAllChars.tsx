@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Character } from "../Interfaces/types";
+import { Character } from "../../Interfaces/types";
 
 const useAllChars = (page: number) => {
   const [data, setData] = useState<Character[]>([]);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { CharacterOrigin } from "../Interfaces/types";
+import { CharacterOrigin } from "../../Interfaces/types";
 
 const useCharOrigin = (url: string) => {
   const [errorOrigin, setErrorOrigin] = useState("");
