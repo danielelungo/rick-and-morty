@@ -50,7 +50,6 @@ const useEpisodes = (allEpisodes: string[]) => {
     }
   }, [allEpisodes]);
 
-  // custom hook returns value
   return { episodesData, errorEpisodes, loadingEpisodes };
 };
 

@@ -30,7 +30,6 @@ const useCharLocation = (url: string) => {
     }
   }, [url]);
 
-  // custom hook returns value
   return { locationData, errorLocation, loadingLocation };
 };
 

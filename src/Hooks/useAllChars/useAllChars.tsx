@@ -32,7 +32,6 @@ const useAllChars = (page: number) => {
     }
   }, [page]);
 
-  // custom hook returns value
   return { data, error, loading, numPages };
 };
 

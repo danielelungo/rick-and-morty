@@ -36,7 +36,6 @@ const useCharDetails = (id: number) => {
     }
   }, [id]);
 
-  // custom hook returns value
   return { response, error, loading, location, origin };
 };
 

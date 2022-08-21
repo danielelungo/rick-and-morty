@@ -30,7 +30,6 @@ const useCharOrigin = (url: string) => {
     }
   }, [url]);
 
-  // custom hook returns value
   return { originData, errorOrigin, loadingOrigin };
 };
 
