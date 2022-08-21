@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Char component renders Char Component 1`] = `
+<div>
+  <div
+    className="sc-bczRLJ jIDRa"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-gsnTZi ejnaRx"
+    >
+      Rick Sanchez
+    </div>
+    <div
+      className="sc-dkzDqf iJjjTb"
+      color="Alive"
+    >
+      Alive
+    </div>
+    <div
+      className="sc-hKMtZM dfSjXw"
+    >
+      Human
+    </div>
+  </div>
+</div>
+`;
