@@ -8,7 +8,7 @@ exports[`CharTable component renders CharTable Component 1`] = `
     <div
       className="sc-gsnTZi GLudu"
     >
-      Ep N°
+      Ep
     </div>
     <div
       className="sc-dkzDqf iacFKi"
@@ -27,7 +27,7 @@ exports[`CharTable component renders CharTable Component 1`] = `
     <div
       className="sc-jSMfEi jrxkFZ"
     >
-      1
+      S01E01
     </div>
     <div
       className="sc-gKXOVf hRgWju"
@@ -46,7 +46,7 @@ exports[`CharTable component renders CharTable Component 1`] = `
     <div
       className="sc-jSMfEi jrxkFZ"
     >
-      2
+      S03E03
     </div>
     <div
       className="sc-gKXOVf hRgWju"
