@@ -6,16 +6,21 @@ interface LocationDetailsProps {
   mainData?: CharacterLocation;
   error: string;
   response: Character;
+  sameLocationAndOrigin?: boolean;
 }
 
 const LocationDetails: React.FC<LocationDetailsProps> = ({
   mainData,
   error,
   response,
+  sameLocationAndOrigin = false,
 }) => {
   return (
     <>
-      <CharDetail data={response?.name} title="Location: " />
+      <CharDetail
+        data={response?.location?.name}
+        title={sameLocationAndOrigin ? "Location and Origin: " : "Location: "}
+      />
 
       {error ? (
         <span>{error}</span>

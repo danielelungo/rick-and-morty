@@ -53,14 +53,13 @@ const Character = () => {
         <div>
           {error && (
             <div>
-              <p>{error}</p>
+              <h1>{error}</h1>
             </div>
           )}
           <div>
             {response && (
               <div>
                 <Name>{response?.name}</Name>
-
                 <div>
                   <Image
                     src={response?.image}
@@ -70,17 +69,27 @@ const Character = () => {
                 </div>
                 <DetailsContainer>
                   <CharDetail data={response?.gender} title="Gender: " />
-                  <LocationDetails
-                    response={response}
-                    mainData={locationData}
-                    error={errorLocation}
-                  />
-
-                  <OriginDetails
-                    response={response}
-                    mainData={originData}
-                    error={errorOrigin}
-                  />
+                  {response?.location?.name === response?.origin?.name ? (
+                    <LocationDetails
+                      response={response}
+                      mainData={locationData}
+                      error={errorLocation}
+                      sameLocationAndOrigin={true}
+                    />
+                  ) : (
+                    <>
+                      <LocationDetails
+                        response={response}
+                        mainData={locationData}
+                        error={errorLocation}
+                      />
+                      <OriginDetails
+                        response={response}
+                        mainData={originData}
+                        error={errorOrigin}
+                      />
+                    </>
+                  )}
                   {errorEpisodes ? (
                     <span>{errorEpisodes}</span>
                   ) : (
