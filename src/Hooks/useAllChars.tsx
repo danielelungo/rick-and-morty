@@ -11,7 +11,6 @@ const useAllChars = (page: number) => {
   const fetchData = (page: number) => {
     axios
       .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
-
       .then((res) => {
         setNumPages(res.data.info.pages);
         setData(res.data.results);
@@ -23,7 +22,7 @@ const useAllChars = (page: number) => {
       .finally(() => {
         setTimeout(() => {
           setloading(false);
-        }, 1500);
+        }, 100);
       });
   };
 

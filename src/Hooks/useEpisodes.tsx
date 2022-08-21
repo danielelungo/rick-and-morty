@@ -37,7 +37,7 @@ const useEpisodes = (allEpisodes: string[]) => {
         .finally(() => {
           setTimeout(() => {
             setLoadingEpisodes(false);
-          }, 1500);
+          }, 100);
         });
     }
   };

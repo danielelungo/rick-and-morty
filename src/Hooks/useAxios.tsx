@@ -24,7 +24,7 @@ const useAxios = (id: number) => {
       .finally(() => {
         setTimeout(() => {
           setloading(false);
-        }, 1500);
+        }, 100);
       });
   };
 

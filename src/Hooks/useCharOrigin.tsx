@@ -20,7 +20,7 @@ const useCharOrigin = (url: string) => {
       .finally(() => {
         setTimeout(() => {
           setLoadingOrigin(false);
-        }, 1500);
+        }, 100);
       });
   };
 

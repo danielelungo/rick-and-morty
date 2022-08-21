@@ -20,7 +20,7 @@ const useCharLocation = (url: string) => {
       .finally(() => {
         setTimeout(() => {
           setLoadingLocation(false);
-        }, 1500);
+        }, 100);
       });
   };
 
