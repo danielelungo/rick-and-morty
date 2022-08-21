@@ -28,7 +28,7 @@ function Home() {
       ) : loading ? (
         <Oval wrapperClass="loader" height={150} width={150} />
       ) : (
-        data && (
+        data?.length && (
           <div>
             <Char data={data} page={page} />
             <ButtonContainer>
