@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Character } from "../../Interfaces/types";
+import { apiUrl } from "../../Constants/url";
 
 const useAllChars = (page: number) => {
   const [data, setData] = useState<Character[]>([]);
@@ -10,7 +11,7 @@ const useAllChars = (page: number) => {
 
   const fetchData = (page: number) => {
     axios
-      .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
+      .get(`${apiUrl}/character/?page=${page}`)
       .then((res) => {
         setNumPages(res.data.info.pages);
         setData(res.data.results);

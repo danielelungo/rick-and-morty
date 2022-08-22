@@ -2,14 +2,16 @@ import { renderHook } from "@testing-library/react-hooks";
 
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
+import { apiUrl } from "../../Constants/url";
 import { locationDetails } from "../../__mocks__/locationDetails";
 import useCharLocation from "./useCharLocation";
+
+const url = `${apiUrl}/location/20`;
+const mockData = locationDetails;
 
 describe("useChatLocation", () => {
   test("useChatLocation performs GET request", async () => {
     const mock = new MockAdapter(axios);
-    const url = `https://rickandmortyapi.com/api/location/20`;
-    const mockData = locationDetails;
 
     mock.onGet(url).reply(200, mockData);
 
@@ -25,8 +27,6 @@ describe("useChatLocation", () => {
   });
   test("useChatLocation should display error ", async () => {
     const mock = new MockAdapter(axios);
-    const url = `https://rickandmortyapi.com/api/location/20`;
-    const mockData = locationDetails;
 
     mock.onGet(url).reply(404, mockData);
 

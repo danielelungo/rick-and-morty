@@ -4,11 +4,12 @@ import MockAdapter from "axios-mock-adapter";
 import { locationDetails } from "../../__mocks__/locationDetails";
 import useCharOrigin from "./useCharOrigin";
 
+const url = `https://rickandmortyapi.com/api/location/20`;
+const mockData = locationDetails;
+
 describe("useCharOrigin", () => {
   test("useCharOrigin performs GET request", async () => {
     const mock = new MockAdapter(axios);
-    const url = `https://rickandmortyapi.com/api/location/20`;
-    const mockData = locationDetails;
 
     mock.onGet(url).reply(200, mockData);
 
@@ -22,8 +23,6 @@ describe("useCharOrigin", () => {
   });
   test("useCharOrigin should display error ", async () => {
     const mock = new MockAdapter(axios);
-    const url = `https://rickandmortyapi.com/api/location/20`;
-    const mockData = locationDetails;
 
     mock.onGet(url).reply(404, mockData);
 
